@@ -17,7 +17,6 @@ function App() {
   }, []);
 
   const onSuccess = (response) => {
-    console.log(response);
     setUser(response.profileObj);
   };
 
@@ -43,7 +42,7 @@ function App() {
           <h3>{user.givenName}</h3>
           <h3>{user.familyName}</h3>
           <h3>{user.googleId}</h3>
-          <img src={user.imageUrl} alt="Imagen de perfil" />
+          <img style={{borderRadius:"50%"}} src={user.imageUrl} alt="Imagen de perfil" />
           <h3>{user.name}</h3>
         </div>
       ) : (
